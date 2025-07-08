@@ -18,6 +18,7 @@
       max-width: 400px;
       margin: auto;
       box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      position: relative;
     }
     .avatar {
       width: 120px;
@@ -55,6 +56,36 @@
       background-color: #1E7D91;
       color: white;
     }
+
+    /* Chủ đề Trung Thu */
+    .mid-autumn-theme {
+      margin-top: 30px;
+      background: url('https://i.imgur.com/Z4K2Y3T.jpg') no-repeat center;
+      background-size: cover;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .lantern, .lion {
+      width: 60px;
+      margin: 10px;
+      animation: swing 3s infinite ease-in-out;
+    }
+    .mid-autumn-text {
+      font-weight: bold;
+      color: #fffbe7;
+      background-color: rgba(0,0,0,0.5);
+      padding: 10px 15px;
+      border-radius: 12px;
+      display: inline-block;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    @keyframes swing {
+      0% { transform: rotate(0deg); }
+      50% { transform: rotate(8deg); }
+      100% { transform: rotate(0deg); }
+    }
   </style>
 </head>
 <body>
@@ -62,13 +93,13 @@
     <img class="avatar" src="avatar.jpg" alt="Mr.Kevin">
     <h2>MR. KEVIN</h2>
     <p>
-   Chào cả nhà! Mình là Mr. Kevin 😄
-Rất hạnh phúc và biết ơn khi nhận được sự yêu thương từ mọi người – chính điều đó tiếp thêm động lực để mình không ngừng nỗ lực mỗi ngày.
+      Chào cả nhà! Mình là Mr. Kevin 😄
+      Rất hạnh phúc và biết ơn khi nhận được sự yêu thương từ mọi người – chính điều đó tiếp thêm động lực để mình không ngừng nỗ lực mỗi ngày.
 
-Hãy theo dõi mình để cùng học hỏi và lan tỏa những kiến thức tài chính giá trị.
-Cố Vấn Tài Chính Cá Nhân – Cố Vấn Tài Chính Doanh Nghiệp, mình luôn sẵn sàng đồng hành cùng bạn trên hành trình hướng tới sự thịnh vượng và phát triển bền vững.
+      Hãy theo dõi mình để cùng học hỏi và lan tỏa những kiến thức tài chính giá trị.
+      Cố Vấn Tài Chính Cá Nhân – Cố Vấn Tài Chính Doanh Nghiệp, mình luôn sẵn sàng đồng hành cùng bạn trên hành trình hướng tới sự thịnh vượng và phát triển bền vững.
 
-📩 Kết nối với mình qua các kênh bên dưới để cùng nhau chia sẻ, học hỏi và phát triển nhé!
+      📩 Kết nối với mình qua các kênh bên dưới để cùng nhau chia sẻ, học hỏi và phát triển nhé!
     </p>
     
     <a class="social-button" href="https://www.tiktok.com/@tinhoataiphiet">Tiktok Mr.KEVIN</a>
@@ -76,6 +107,13 @@ Cố Vấn Tài Chính Cá Nhân – Cố Vấn Tài Chính Doanh Nghiệp, mìn
     <a class="social-button" href="#">Youtube Mr.KEVIN</a>
     <a class="social-button" href="#">Instagram Mr.KEVIN</a>
     <a class="social-button" href="#">Group cố vấn tài chính</a>
+
+    <!-- Chủ đề Trung Thu -->
+    <div class="mid-autumn-theme">
+      <img src="https://i.imgur.com/T0uCGlw.png" alt="Lồng đèn Trung Thu" class="lantern">
+      <img src="https://i.imgur.com/v9Dg7FI.png" alt="Lân Trung Thu" class="lion">
+      <p class="mid-autumn-text">🎑 Trung Thu sum vầy cùng Mr. Kevin – Rước đèn phá cỗ, học tài chính vững vàng! 🏮</p>
+    </div>
   </div>
 </body>
 </html>
