@@ -1,156 +1,148 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mr. KEVIN</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      text-align: center;
-      padding: 30px;
-    }
-    .container {
-      background-color: #fff;
-      border-radius: 20px;
-      padding: 30px;
-      max-width: 400px;
-      margin: auto;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      position: relative;
-    }
-    .avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-    }
-    h2 {
-      color: #007C91;
-      margin-bottom: 20px;
-    }
-    p {
-      color: #333;
-      line-height: 1.8;
-      text-align: justify;
-      text-justify: inter-word;
-      margin-bottom: 30px;
-      padding: 0 10px;
-    }
-    .social-button {
-      display: block;
-      margin: 10px auto;
-      padding: 15px 20px;
-      width: 85%;
-      border: 2px solid #1E7D91;
-      border-radius: 30px;
-      text-decoration: none;
-      color: #1E7D91;
-      font-weight: bold;
-      font-size: 16px;
-      transition: all 0.3s ease;
-    }
-    .social-button:hover {
-      background-color: #1E7D91;
-      color: white;
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mr. KEVIN</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      text-align: center;
+      padding: 30px;
+    }
+    .container {
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+    h2 {
+      color: #007C91;
+      margin-bottom: 20px;
+    }
+    p {
+      color: #333;
+      line-height: 1.8;
+      text-align: justify;
+      text-justify: inter-word;
+      margin-bottom: 30px;
+      padding: 0 10px;
+    }
+    .social-button {
+      display: block;
+      margin: 10px auto;
+      padding: 15px 20px;
+      width: 85%;
+      border: 2px solid #1E7D91;
+      border-radius: 30px;
+      text-decoration: none;
+      color: #1E7D91;
+      font-weight: bold;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+    .social-button:hover {
+      background-color: #1E7D91;
+      color: white;
+    }
 
-    /* Chủ đề Trung Thu */
-    .mid-autumn-theme {
-      margin-top: 30px;
-      background: url('mid-autumn-bg.jpg') no-repeat center;
-      background-size: cover;
-      border-radius: 20px;
-      padding: 20px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
-    .lantern, .lion {
-      width: 60px;
-      margin: 10px;
-      animation: swing 3s infinite ease-in-out;
-    }
-    .mid-autumn-text {
-      font-weight: bold;
-      color: #fffbe7;
-      background-color: rgba(0,0,0,0.5);
-      padding: 10px 15px;
-      border-radius: 12px;
-      display: inline-block;
-      font-size: 16px;
-      margin-top: 10px;
-    }
-    @keyframes swing {
-      0% { transform: rotate(0deg); }
-      50% { transform: rotate(8deg); }
-      100% { transform: rotate(0deg); }
-    }
 
-    /* Nút âm thanh */
-    .sound-btn {
-      margin-top: 20px;
-      padding: 10px 20px;
-      border-radius: 10px;
-      border: none;
-      background-color: #1E7D91;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-    }
-  </style>
+    /* Chủ đề Trung Thu */
+    .mid-autumn-theme {
+      margin-top: 30px;
+      background: url('mid-autumn-bg.jpg') no-repeat center;
+      background-size: cover;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .mid-autumn-text {
+      font-weight: bold;
+      color: #fffbe7;
+      background-color: rgba(0,0,0,0.5);
+      padding: 10px 15px;
+      border-radius: 12px;
+      display: inline-block;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+
+    /* Nút âm thanh */
+    .sound-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      background-color: #1E7D91;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <img class="avatar" src="avatar.jpg" alt="Mr.Kevin">
-    <h2>MR. KEVIN</h2>
-    <p>
-      Chào cả nhà! Mình là Mr. Kevin 😄<br>
-      Rất hạnh phúc và biết ơn khi nhận được sự yêu thương từ mọi người – chính điều đó tiếp thêm động lực để mình không ngừng nỗ lực mỗi ngày.
-      <br><br>
-      Hãy theo dõi mình để cùng học hỏi và lan tỏa những kiến thức tài chính giá trị.
-      <br>
-      Cố Vấn Tài Chính Cá Nhân – Cố Vấn Tài Chính Doanh Nghiệp. Mình luôn sẵn sàng đồng hành cùng bạn trên hành trình hướng tới sự thịnh vượng và phát triển bền vững.
-      <br><br>
-      📩 Kết nối với mình qua các kênh bên dưới để cùng nhau chia sẻ, học hỏi và phát triển nhé!
-    </p>
-    
-    <a class="social-button" href="https://www.tiktok.com/@tinhoataiphiet">Tiktok Mr.KEVIN</a>
-    <a class="social-button" href="https://www.facebook.com/TKevin.200505/">Facebook Mr.KEVIN</a>
-    <a class="social-button" href="#">Youtube Mr.KEVIN</a>
-    <a class="social-button" href="#">Instagram Mr.KEVIN</a>
-    <a class="social-button" href="#">Group cố vấn tài chính</a>
+  <div class="container">
+    <img class="avatar" src="avatar.jpg" alt="Mr.Kevin">
+    <h2>MR. KEVIN</h2>
+    <p>
+      Chào cả nhà! Mình là Mr. Kevin 😄<br>
+      Rất hạnh phúc và biết ơn khi nhận được sự yêu thương từ mọi người – chính điều đó tiếp thêm động lực để mình không ngừng nỗ lực mỗi ngày.
+      <br><br>
+      Hãy theo dõi mình để cùng học hỏi và lan tỏa những kiến thức tài chính giá trị.
+      <br>
+      Cố Vấn Tài Chính Cá Nhân – Cố Vấn Tài Chính Doanh Nghiệp. Mình luôn sẵn sàng đồng hành cùng bạn trên hành trình hướng tới sự thịnh vượng và phát triển bền vững.
+      <br><br>
+      📩 Kết nối với mình qua các kênh bên dưới để cùng nhau chia sẻ, học hỏi và phát triển nhé!
+    </p>
+    
+    <a class="social-button" href="https://www.tiktok.com/@tinhoataiphiet">Tiktok Mr.KEVIN</a>
+    <a class="social-button" href="https://www.facebook.com/TKevin.200505/">Facebook Mr.KEVIN</a>
+    <a class="social-button" href="#">Youtube Mr.KEVIN</a>
+    <a class="social-button" href="#">Instagram Mr.KEVIN</a>
+    <a class="social-button" href="#">Group cố vấn tài chính</a>
 
-    <!-- Chủ đề Trung Thu -->
-    <div class="mid-autumn-theme">
-      <img src="lantern.png" alt="Lồng đèn Trung Thu" class="lantern">
-      <img src="lion.png" alt="Lân Trung Thu" class="lion">
-      <p class="mid-autumn-text">🎑 Trung Thu sum vầy cùng Mr. Kevin – Rước đèn phá cỗ, tài chính vững vàng! 🏮</p>
-    </div>
 
-    <!-- Nút bật/tắt nhạc -->
-    <button class="sound-btn" onclick="toggleAudio()">🔈 Bật / Tắt nhạc Trung Thu</button>
+        <div class="mid-autumn-theme">
+      <p class="mid-autumn-text">🎑 Trung Thu sum vầy cùng Mr. Kevin – Rước đèn phá cỗ, tài chính vững vàng! 🏮</p>
+    </div>
 
-    <!-- Âm thanh -->
-    <audio id="midAutumnAudio" loop>
-      <source src="https://files.catbox.moe/k5y2zq.mp3" type="audio/mpeg">
-      Trình duyệt của bạn không hỗ trợ phát âm thanh.
-    </audio>
-  </div>
 
-  <script>
-    const audio = document.getElementById("midAutumnAudio");
-    audio.volume = 0.3;
-    let isPlaying = false;
+        <button class="sound-btn" onclick="toggleAudio()">🔈 Bật / Tắt nhạc Trung Thu</button>
 
-    function toggleAudio() {
-      if (isPlaying) {
-        audio.pause();
-      } else {
-        audio.play();
-      }
-      isPlaying = !isPlaying;
-    }
-  </script>
+
+        <audio id="midAutumnAudio" loop>
+      <source src="trungthu.mp3" type="audio/mpeg">
+      Trình duyệt của bạn không hỗ trợ phát âm thanh.
+    </audio>
+  </div>
+
+
+  <script>
+    const audio = document.getElementById("midAutumnAudio");
+    audio.volume = 0.3;
+    let isPlaying = false;
+
+
+    function toggleAudio() {
+      if (isPlaying) {
+        audio.pause();
+      } else {
+        audio.play();
+      }
+      isPlaying = !isPlaying;
+    }
+  </script>
 </body>
 </html>
