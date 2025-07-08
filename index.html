@@ -60,7 +60,7 @@
     /* Chủ đề Trung Thu */
     .mid-autumn-theme {
       margin-top: 30px;
-      background: url('https://i.imgur.com/Z4K2Y3T.jpg') no-repeat center;
+      background: url('mid-autumn-bg.jpg') no-repeat center;
       background-size: cover;
       border-radius: 20px;
       padding: 20px;
@@ -86,6 +86,18 @@
       50% { transform: rotate(8deg); }
       100% { transform: rotate(0deg); }
     }
+
+    /* Nút âm thanh */
+    .sound-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      background-color: #1E7D91;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -93,12 +105,13 @@
     <img class="avatar" src="avatar.jpg" alt="Mr.Kevin">
     <h2>MR. KEVIN</h2>
     <p>
-      Chào cả nhà! Mình là Mr. Kevin 😄
+      Chào cả nhà! Mình là Mr. Kevin 😄<br>
       Rất hạnh phúc và biết ơn khi nhận được sự yêu thương từ mọi người – chính điều đó tiếp thêm động lực để mình không ngừng nỗ lực mỗi ngày.
-
+      <br><br>
       Hãy theo dõi mình để cùng học hỏi và lan tỏa những kiến thức tài chính giá trị.
+      <br>
       Cố Vấn Tài Chính Cá Nhân – Cố Vấn Tài Chính Doanh Nghiệp. Mình luôn sẵn sàng đồng hành cùng bạn trên hành trình hướng tới sự thịnh vượng và phát triển bền vững.
-
+      <br><br>
       📩 Kết nối với mình qua các kênh bên dưới để cùng nhau chia sẻ, học hỏi và phát triển nhé!
     </p>
     
@@ -110,10 +123,34 @@
 
     <!-- Chủ đề Trung Thu -->
     <div class="mid-autumn-theme">
-      <img src="https://i.imgur.com/T0uCGlw.png" alt="Lồng đèn Trung Thu" class="lantern">
-      <img src="https://i.imgur.com/v9Dg7FI.png" alt="Lân Trung Thu" class="lion">
+      <img src="lantern.png" alt="Lồng đèn Trung Thu" class="lantern">
+      <img src="lion.png" alt="Lân Trung Thu" class="lion">
       <p class="mid-autumn-text">🎑 Trung Thu sum vầy cùng Mr. Kevin – Rước đèn phá cỗ, tài chính vững vàng! 🏮</p>
     </div>
+
+    <!-- Nút bật/tắt nhạc -->
+    <button class="sound-btn" onclick="toggleAudio()">🔈 Bật / Tắt nhạc Trung Thu</button>
+
+    <!-- Âm thanh -->
+    <audio id="midAutumnAudio" loop>
+      <source src="https://files.catbox.moe/k5y2zq.mp3" type="audio/mpeg">
+      Trình duyệt của bạn không hỗ trợ phát âm thanh.
+    </audio>
   </div>
+
+  <script>
+    const audio = document.getElementById("midAutumnAudio");
+    audio.volume = 0.3;
+    let isPlaying = false;
+
+    function toggleAudio() {
+      if (isPlaying) {
+        audio.pause();
+      } else {
+        audio.play();
+      }
+      isPlaying = !isPlaying;
+    }
+  </script>
 </body>
 </html>
