@@ -203,7 +203,7 @@
     function createFirework(x, y) {
       const colors = ['#ff5050', '#ffd700', '#66ccff', '#cc66ff', '#00ff99'];
       const color = colors[Math.floor(Math.random() * colors.length)];
-      for (let i = 0; i < 50; i++) {
+      for (let i = 0; i < 60; i++) {
         particles.push(new Particle(x, y, color));
       }
     }
@@ -230,10 +230,13 @@
     });
 
     setInterval(() => {
-      const x = random(100, w - 100);
-      const y = random(100, h / 2);
-      createFirework(x, y);
-    }, 1500);
+  for (let i = 0; i < 3; i++) {
+    const x = random(100, w - 100);
+    const y = random(100, h / 2);
+    createFirework(x, y);
+  }
+}, 600); // Ba pháo hoa mỗi 0.8 giây
+
 
     window.addEventListener('resize', () => {
       w = window.innerWidth;
