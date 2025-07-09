@@ -178,7 +178,7 @@
       constructor(x, y, color) {
         this.x = x;
         this.y = y;
-        this.radius = 0.6;
+        this.radius = 1.5;
         this.color = color;
         this.speed = random(2, 10);
         this.angle = random(0, 2 * Math.PI);
@@ -204,7 +204,7 @@
     function createFirework(x, y) {
       const colors = ['#ff5050', '#ffd700', '#66ccff', '#cc66ff', '#00ff99'];
       const color = colors[Math.floor(Math.random() * colors.length)];
-      for (let i = 0; i < 60; i++) {
+      for (let i = 0; i < 90; i++) {
         particles.push(new Particle(x, y, color));
       }
     }
@@ -234,7 +234,7 @@
     const y = random(100, h / 2);
     createFirework(x, y);
   }
-}, 600); // Ba pháo hoa mỗi 0.8 giây
+}, 300); // Ba pháo hoa mỗi 0.8 giây
 
 
     window.addEventListener('resize', () => {
