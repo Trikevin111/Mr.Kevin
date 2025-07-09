@@ -177,7 +177,7 @@
       constructor(x, y, color) {
         this.x = x;
         this.y = y;
-        this.radius = 2;
+        this.radius = 0.9;
         this.color = color;
         this.speed = random(2, 10);
         this.angle = random(0, 2 * Math.PI);
@@ -203,7 +203,7 @@
     function createFirework(x, y) {
       const colors = ['#ff5050', '#ffd700', '#66ccff', '#cc66ff', '#00ff99'];
       const color = colors[Math.floor(Math.random() * colors.length)];
-      for (let i = 0; i < 30; i++) {
+      for (let i = 0; i < 50; i++) {
         particles.push(new Particle(x, y, color));
       }
     }
