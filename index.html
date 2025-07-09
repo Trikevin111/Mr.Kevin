@@ -19,6 +19,7 @@
       margin: auto;
       box-shadow: 0 0 15px rgba(0,0,0,0.1);
       position: relative;
+      z-index: 1;
     }
     .avatar {
       width: 120px;
@@ -87,7 +88,6 @@
       100% { transform: rotate(0deg); }
     }
 
-    /* Nút âm thanh */
     .sound-btn {
       margin-top: 20px;
       padding: 10px 20px;
@@ -98,9 +98,19 @@
       font-weight: bold;
       cursor: pointer;
     }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
+  <canvas id="fireworks"></canvas>
+
   <div class="container">
     <img class="avatar" src="avatar.jpg" alt="Mr.Kevin">
     <h2>MR. KEVIN</h2>
@@ -121,17 +131,14 @@
     <a class="social-button" href="#">Instagram Mr.KEVIN</a>
     <a class="social-button" href="#">Group cố vấn tài chính</a>
 
-    <!-- Chủ đề Trung Thu -->
     <div class="mid-autumn-theme">
       <img src="lantern.png" alt="Lồng đèn Trung Thu" class="lantern">
       <img src="lion.png" alt="Lân Trung Thu" class="lion">
       <p class="mid-autumn-text">🎑 Trung Thu sum vầy cùng Mr. Kevin – Rước đèn phá cỗ, tài chính vững vàng! 🏮</p>
     </div>
 
-    <!-- Nút bật/tắt nhạc -->
     <button class="sound-btn" onclick="toggleAudio()">🔈 Bật / Tắt nhạc Trung Thu</button>
 
-    <!-- Âm thanh -->
     <audio id="midAutumnAudio" loop>
       <source src="trungthu.mp3" type="audio/mpeg">
       Trình duyệt của bạn không hỗ trợ phát âm thanh.
@@ -151,7 +158,89 @@
       }
       isPlaying = !isPlaying;
     }
+
+    // PHÁO HOA
+    const canvas = document.getElementById('fireworks');
+    const ctx = canvas.getContext('2d');
+    let w = window.innerWidth;
+    let h = window.innerHeight;
+    canvas.width = w;
+    canvas.height = h;
+
+    const particles = [];
+
+    function random(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    class Particle {
+      constructor(x, y, color) {
+        this.x = x;
+        this.y = y;
+        this.radius = 2;
+        this.color = color;
+        this.speed = random(2, 10);
+        this.angle = random(0, 2 * Math.PI);
+        this.alpha = 1;
+        this.fade = random(0.01, 0.03);
+      }
+
+      update() {
+        this.x += Math.cos(this.angle) * this.speed;
+        this.y += Math.sin(this.angle) * this.speed;
+        this.alpha -= this.fade;
+      }
+
+      draw() {
+        ctx.globalAlpha = this.alpha;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+      }
+    }
+
+    function createFirework(x, y) {
+      const colors = ['#ff5050', '#ffd700', '#66ccff', '#cc66ff', '#00ff99'];
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      for (let i = 0; i < 50; i++) {
+        particles.push(new Particle(x, y, color));
+      }
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+      ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+      ctx.fillRect(0, 0, w, h);
+
+      for (let i = particles.length - 1; i >= 0; i--) {
+        const p = particles[i];
+        p.update();
+        p.draw();
+        if (p.alpha <= 0) {
+          particles.splice(i, 1);
+        }
+      }
+    }
+
+    animate();
+
+    canvas.addEventListener('click', (e) => {
+      createFirework(e.clientX, e.clientY);
+    });
+
+    setInterval(() => {
+      const x = random(100, w - 100);
+      const y = random(100, h / 2);
+      createFirework(x, y);
+    }, 1500);
+
+    window.addEventListener('resize', () => {
+      w = window.innerWidth;
+      h = window.innerHeight;
+      canvas.width = w;
+      canvas.height = h;
+    });
   </script>
 </body>
 </html>
-
